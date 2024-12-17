@@ -1,5 +1,5 @@
 name: Deploy AWS VPC set up
-on:
+on: 
   push:
     branches:
       - Master
