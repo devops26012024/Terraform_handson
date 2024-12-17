@@ -2,7 +2,7 @@ name: Deploy AWS VPC set up
 on: 
   push:
     branches:
-      - Master
+      - main
 
 jobs:
   terraform:
