@@ -26,3 +26,24 @@ resource "aws_internet_gateway" "igw" {
     Name = "main-igw"
   }
 }
+
+# Create an S3 bucket for the Terraform state
+resource "aws_s3_bucket" "state_bucket" {
+  bucket = "training-bangalore-196" 
+  acl    = "private"
+ 
+  tags = {
+    Name = "Terraform State Bucket"
+  }
+}
+ 
+ 
+#ec2-creation
+resource "aws_instance" "example" {
+  ami           = "ami-053b12d3152c0cc71"
+  instance_type = "t2.micro"
+ 
+  tags = {
+    Name = "Handson"
+  }
+}
